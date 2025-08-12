@@ -1,4 +1,5 @@
-#Walmart Order Splitter
+Walmart Order Splitter
+
 Walmart Order Splitter is a Chrome extension that helps you easily split your Walmart cart total between multiple people. It automatically detects all items in your cart, handles products with multiple quantities, and calculates each person’s share while factoring in tax, shipping, and discounts.
 
 Perfect for roommates, friends, or family who share Walmart orders.
