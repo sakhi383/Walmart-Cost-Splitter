@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Walmart Cost Splitter",
+  "version": "1.0",
+  "description": "Split Walmart cart costs fairly between people.",
+  "action": { "default_popup": "popup.html" },
+  "permissions": [],
+  "host_permissions": ["https://www.walmart.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://www.walmart.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

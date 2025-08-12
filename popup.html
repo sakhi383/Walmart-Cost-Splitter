@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Walmart Splitter</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h2>Walmart Splitter</h2>
+
+  <label>People (comma separated)</label>
+  <input id="peopleInput" placeholder="Ava,Ben,Cam">
+
+  <div style="margin-top:8px">
+    <button id="loadBtn">Load cart</button>
+  </div>
+
+  <div id="cart"></div>
+
+  <h3 style="margin-top:10px">Fees</h3>
+  <div>Tax: <span id="tax">$0.00</span></div>
+  <div>Shipping: <span id="shipping">$0.00</span></div>
+  <div>Discount: <span id="discount">$0.00</span></div>
+
+  <h3 style="margin-top:10px">Totals</h3>
+  <div id="totals"></div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
