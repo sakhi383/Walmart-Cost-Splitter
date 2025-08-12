@@ -1,89 +1,51 @@
-# Walmart-Cost-Splitter
-Walmart Order Splitter is a Chrome extension that helps you easily split Walmart cart or order totals between multiple people. It automatically detects every item on the page including multi-quantity products like bread, and calculates how much each person owes, with tax, shipping, and discounts factored in. 
-Walmart Order Splitter is a Chrome extension that lets you quickly split Walmart cart or order history totals between multiple people. It automatically detects each item, its quantity, and its price (including support for multi-quantity items like bread), and calculates the per-person cost including tax, shipping, and discounts.
+Walmart Order Splitter
+Walmart Order Splitter is a Chrome extension that helps you easily split your Walmart cart total between multiple people. It automatically detects all items in your cart, handles products with multiple quantities, and calculates each person’s share while factoring in tax, shipping, and discounts.
 
-✨ Features
-Automatic Item Detection – Works on both Walmart cart pages and order history pages.
+Perfect for roommates, friends, or family who share Walmart orders.
 
-Multi-Quantity Handling – Correctly processes items with quantities greater than 1.
+Features
+Automatically detects all items in your Walmart cart
 
-Fee Inclusion – Splits costs including tax, shipping, and discounts.
+Handles products with multiple quantities
 
-Duplicate Prevention – Ensures each item is only counted once even if it appears multiple times in the DOM.
+Calculates each person’s share including tax, shipping, and discounts
 
-Flexible Assignment – Assign each item to a specific person or everyone in the group.
+Simple, intuitive popup interface to assign items to people
 
-📸 How It Works
-Open your Walmart Cart or Order Details page.
-
-Open the extension popup.
-
-Enter names (comma-separated) for the people splitting the order.
-
-Click Load Cart – the extension will:
-
-Scrape all visible items.
-
-Calculate totals for each person.
-
-Display the breakdown.
-
-🛠️ Technical Overview
-The core logic lives in content.js:
-
-DOM Scraping
-
-Detects visible product containers using multiple CSS selectors.
-
-Filters out non-product lines like "Subtotal" or "Sales Tax".
-
-Extracts title, price, quantity, and optional unit information.
-
-De-Duplication
-
-Uses a combined key of product title and price to avoid duplicates.
-
-Calculation
-
-Computes per-item total cost.
-
-Aggregates subtotals, tax, shipping, and discounts.
-
-Popup Communication
-
-Listens for GET_CART messages from popup.js and responds with scraped data.
-
-📂 File Structure
-bash
-Copy
-Edit
-walmart-order-splitter/
-├── manifest.json        # Chrome extension config
-├── popup.html           # Popup UI
-├── popup.js             # Handles UI logic & displays results
-├── content.js           # Scrapes Walmart pages and sends data to popup
-├── icons/               # Extension icons
-└── README.md            # This file
-🚀 Installation
+Installation
 Clone or download this repository.
 
-Open chrome://extensions in Chrome.
+Open Chrome and go to chrome://extensions/.
 
-Enable Developer mode.
+Enable Developer mode (toggle in the top right).
 
-Click Load unpacked.
+Click Load unpacked and select the folder where you saved the extension.
 
-Select the extension's folder.
+Usage
+Open your Walmart cart in your browser.
 
-📌 Notes
-Works on both cart and order history pages.
+Click on the Walmart Order Splitter icon in Chrome.
 
-Bread and other multi-quantity items are fully supported.
+Enter the names of the people (comma-separated).
 
-This extension runs locally in your browser – no data is sent anywhere.
+Click Load cart to see all items and assign them to each person.
 
-Walmart may update its site structure; occasional selector updates may be needed.
+The extension will instantly calculate each person’s total.
 
-📝 License
-MIT License.
-Feel free to fork, modify, and improve.
+Example
+If you enter:
+
+Copy
+Edit
+Alex, Jamie
+and assign certain items to each person, the popup will display their totals separately with tax, shipping, and discounts included.
+
+Tech Stack
+JavaScript (content script, popup script)
+
+HTML/CSS (popup UI)
+
+Chrome Extensions API
+
+License
+This project is licensed under the MIT License – feel free to use and modify it for personal or commercial projects.
